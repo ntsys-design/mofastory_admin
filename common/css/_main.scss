@@ -1,0 +1,124 @@
+.main_wrapper {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/main_bg.png) no-repeat bottom #212E40;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  padding-bottom: 32px;
+}
+
+.login {
+  width: 612px;
+  background: #fff;
+  border-radius: 16px;
+
+
+  h2 {
+    font-weight: 500;
+    font-size: 2.5em;
+    padding:48px 0 32px;
+    text-align: center;
+  }
+
+  .loginform_wrap {
+    margin: auto;
+    width: 400px;
+
+    form {
+      position: relative;
+      margin-bottom: 16px;
+
+      input {
+        margin: auto;
+
+        &[type="text"],
+        &[type="password"] {
+          height: 59px;
+          border: 1px solid #DBDBDB;
+          border-radius: 999px;
+          font-size: 1.125em;
+          font-weight: 500;
+          color: #484B51;
+
+
+          &:focus {
+            border: 1px solid #2A5AD3;
+            outline: 0;
+          }
+
+          &::placeholder {
+            color: #A1A7B4;
+
+          }
+
+        }
+
+
+
+      }
+
+      &.checkbox_form {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        input {
+          margin: 0 5px 0 0;
+          padding: 0;
+          width: 16px;
+          height: 16px;
+          border: 1px solid #212E40;
+          background-image: url("../images/chk_off.jpg");
+
+          &:checked {
+            background-image: url("../images/chk_on.jpg");
+          }
+        }
+      }
+
+      .email_box:not(:valid)~.reset_icon {
+        display: none;
+      }
+
+      .pw_box:not(:valid)~.reset_icon {
+        display: none;
+      }
+
+      button.reset_icon {
+
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        z-index: 1;
+        right: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: auto;
+        padding: 2px;
+        background: url(../images/reset_btn.png) no-repeat;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+
+    }
+
+    .login_btn {
+      width: 100%;
+      height: 52px;
+      background: #2A5AD3;
+      border-radius: 999px;
+      span{
+        color: #fff;
+        font-weight: 500;
+      }
+      margin-bottom: 30px;
+    }
+  }
+}
