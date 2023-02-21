@@ -1,0 +1,146 @@
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+}
+
+// header
+header {
+  height: 86px;
+  background: #2A5AD3;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo_nav_wrap {
+      display: flex;
+
+      .hd_logo {
+        margin-right: 72px;
+      }
+
+      nav {
+        ul {
+          display: flex;
+
+          li {
+            margin-right: 16px;
+
+            a {
+              font-weight: 500;
+              font-size: 1.125em;
+              color: #fff;
+              padding: 13px 32px;
+
+              &.on {
+                background: #fff;
+                color: #2A5AD3;
+                border-radius: 999px;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .util {
+      display: flex;
+      align-items: center;
+
+      .login_info_btn {
+        width: 24px;
+        height: 24px;
+        background: url(../images/login_info.png);
+        margin-right: 8px;
+      }
+
+      a {
+        color: #fff;
+
+      }
+
+      .logout_btn {
+        margin-left: 16px;
+        height: 25px;
+        border: 1px solid #FFFFFF;
+        border-radius: 2px;
+        opacity: 0.5;
+
+        span {
+          font-size: 0.875em;
+          color: #fff;
+          padding: 4px 10px;
+
+        }
+      }
+    }
+  }
+}
+
+input {
+  outline: 0;
+}
+
+select {
+  background: url(../images/arrow.png)no-repeat 97% center #FFFFFF;
+  border: 1px solid #DBDBDB;
+  outline: 0;
+}
+
+footer {
+  height: 117px;
+  background: #212E40;
+
+  .container {
+    height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+.ft_wrap{
+  display: flex;
+  align-items: center;
+  .ft_logo {     
+      img {
+        opacity: 0.6;
+      }
+      margin-right: 36px;
+    }
+    ul{
+      display: flex;
+      li{
+        font-weight: 300;
+        color: #fff;
+        padding: 0 16px;
+        font-size: 0.875em;
+        &:last-child{
+          color: #A1A7B4;
+          position: relative;
+          &::before{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 12px;
+            background: #868B95;
+            left: 0;top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+}
+p{
+  font-weight: 400;
+  font-size: 0.875em;
+  color: #FFFFFF;
+}
+    
+  }
+
+}

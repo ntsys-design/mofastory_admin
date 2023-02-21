@@ -24,6 +24,7 @@
     font-size: 2.5em;
     padding:48px 0 32px;
     text-align: center;
+    line-height: 150%;
   }
 
   .loginform_wrap {
@@ -69,15 +70,15 @@
         align-items: center;
 
         input {
-          margin: 0 5px 0 0;
+          margin: 0 5px 0 8px;
           padding: 0;
-          width: 16px;
-          height: 16px;
-          border: 1px solid #212E40;
-          background-image: url("../images/chk_off.jpg");
+          width: 20px;
+          height: 20px;
+          
+          background-image: url("../images/chk_off.png") ;
 
           &:checked {
-            background-image: url("../images/chk_on.jpg");
+            background-image: url("../images/chk_on.png");
           }
         }
       }
@@ -118,7 +119,7 @@
         color: #fff;
         font-weight: 500;
       }
-      margin-bottom: 30px;
+      margin-bottom: 64px;
     }
   }
 }

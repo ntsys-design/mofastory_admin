@@ -1,0 +1,433 @@
+// sns 현황
+.contents {
+  .container {
+    h2 {
+      padding: 48px 0 24px;
+      font-weight: 600;
+      font-size: 1.75em;
+    }
+
+    // 조회조건
+    .inquiry {
+      background: #F9F9F9;
+      border: 1px solid #DBDBDB;
+      padding: 34px 48px 40px;
+      margin-bottom: 54px;
+
+      >ul {
+
+        >li {
+          display: flex;
+          align-items: center;
+          padding-bottom: 24px;
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+
+          >label,
+          >span {
+            min-width: 83px;
+            font-weight: 500;
+            font-size: 1.125em;
+            margin-right: 40px;
+          }
+
+          select {
+            padding: 0 16px;
+            max-width: 380px;
+            height: 36px;
+            font-weight: 400;
+            font-size: 1em;
+            color: #484B51;
+
+            border: 1px solid #DBDBDB;
+            border-radius: 2px;
+
+          }
+
+          ul {
+            display: flex;
+            width: calc(100% - 107px);
+
+            li {
+              display: flex;
+              align-items: center;
+              padding-right: 16px;
+
+              input {
+                padding: 0;
+              }
+
+              label {
+                margin: 0 8px;
+              }
+
+              a {
+                padding: 6px 16px;
+                color: #484B51;
+                border: 1px solid #DBDBDB;
+                border-radius: 999px;
+                background: #fff;
+
+                &.active {
+                  color: #2A5AD3;
+                  border: 1px solid #2A5AD3;
+                }
+              }
+
+              input[type="radio"] {
+                margin: 0;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: #fff;
+                border: 1px solid #DBDBDB;
+
+                &:checked {
+                  border: 7px solid #2A5AD3;
+                }
+              }
+
+              input[type="date"] {
+                width: 151px;
+                height: 36px;
+                border-radius: 2px;
+                border: 1px solid #DBDBDB;
+                padding: 6px 16px;
+                font-size: 1em;
+                color: #484B51;
+                position: relative;
+
+                &::-webkit-clear-button,
+                &::-webkit-inner-spin-button {
+                  display: none;
+                }
+
+                &::-webkit-calendar-picker-indicator {
+                  background: transparent;
+                  z-index: 1;
+                }
+
+                &::after {
+                  position: absolute;
+                  top: 50%;
+                  right: 16px;
+                  content: '';
+                  width: 20px;
+                  height: 22px;
+
+                  background: url(../images/calendar_ico.png) center center /contain;
+                  transform: translateY(-50%);
+                  z-index: 0;
+
+                }
+              }
+
+              span {
+                padding: 0 8px;
+              }
+            }
+          }
+        }
+      }
+
+      .btn_wrap {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 32px;
+
+        button {
+          width: 112px;
+          height: 44px;
+          border-radius: 4px;
+
+          span {
+            font-weight: 500;
+          }
+
+          &.reset_btn {
+            background: #fff;
+            border: 1px solid #2A5AD3;
+
+            span {
+              color: #2A5AD3;
+            }
+          }
+
+          &.inquiry_btn {
+            background: #2A5AD3;
+
+            span {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    //리스트
+    .list_wrap {
+      margin-bottom: 80px;
+      position: relative;
+      .list_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+          color: #2A5AD3;
+
+          b {
+            color: #37393F;
+          }
+        }
+
+        select {
+          border-radius: 4px;
+          padding: 6px 44px 6px 16px;
+          background-position: 96% 50%;
+
+          font-size: 1em;
+        }
+      }
+
+      table {
+        border-collapse: collapse;
+        margin: 16px 0 24px;
+        border-bottom: 2px solid #DBDBDB;
+
+        input[type="checkbox"] {
+          margin: auto;
+          padding: 0;
+          width: 24px;
+          height: 24px;
+          background: url(../images/list_chk_off.png);
+
+          &:checked {
+            background: url(../images/list_chk_on.png);
+          }
+        }
+
+        thead {
+          background: #EAEAEA;
+          border-style: hidden;
+          box-shadow: 0 0 0 1px #EAEAEA;
+          border-radius: 4px;
+
+          tr {
+            height: 59px;
+
+            th {
+              vertical-align: middle;
+              font-weight: 500;
+              font-size: 1.125em;
+              color: #37393F;
+
+              input {
+                margin: auto;
+              }
+
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            height: 56px;
+            border-bottom: 1px solid #EAEAEA;
+
+            td {
+              vertical-align: middle;
+              text-align: center;
+
+              &:nth-child(3),
+              &:nth-child(4) {
+                text-align: left;
+                padding-left: 1%;
+              }
+
+            }
+          }
+        }
+
+      }
+
+      .pagination_wrap {
+
+        .pagination {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 32px;
+
+          >a {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            min-width: 20px;
+            flex-shrink: 0;
+
+            &.first_page {
+              background: url(../images/btn_first_page.png) no-repeat center center/contain;
+              margin-right: 16px;
+
+
+
+            }
+
+            &.prev_page {
+              background: url(../images/btn_prev_page.png) no-repeat center center/contain;
+              margin-right: 46px;
+
+
+            }
+
+            &.next_page {
+              background: url(../images/btn_next_page.png) no-repeat center center/contain;
+              margin-left: 46px;
+
+
+            }
+
+            &.last_page {
+              background: url(../images/btn_last_page.png) no-repeat center center/contain;
+              margin-left: 16px;
+
+
+            }
+
+
+          }
+
+          ul {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+
+            >li {
+              margin-right: 20px;
+
+
+              &:last-child {
+                margin-right: 0;
+              }
+
+              a {
+                display: flex;
+                color: #868B95;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.125em;
+                position: relative;
+
+                &.active {
+                  font-weight: 500;
+                  color: #2A5AD3;
+
+                  &:after {
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    width: 24px;
+                    background: #2A5AD3;
+                    bottom: 0;
+
+                  }
+                }
+
+                &:last-child {
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+      .best_btn {
+        position: absolute;
+        bottom: -1%;
+        right: 0;
+        width: 151px;
+        height: 44px;
+        background: #2A5AD3;
+        border-radius: 4px;
+
+        span {
+          color: #fff;
+          font-weight: 500;
+        }
+      }
+
+    }
+  }
+}
+
+// sns 현황 상세
+.detail_info{
+  padding-bottom: 80px;
+  h3{
+    padding: 24px 0;
+    font-weight: 500;
+    font-size: 1.5em;
+  }
+  table{
+    border-top: 2px solid #DBDBDB;
+    border-bottom: 2px solid #DBDBDB;
+    tbody{
+      text-align: left;
+      tr{
+        border-bottom: 1px solid #EAEAEA;
+      
+      th{
+        background: #F9F9F9;
+        padding: 16px 24px;
+        font-weight: 500;
+        font-size: 1.125em;
+      }
+      td{
+        padding: 16px 24px;
+        &.best_y{
+          color: #2A5AD3;
+        }
+      }
+    }
+    }
+  }
+  .btn_wrap{
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button{
+      height: 44px;
+      width: 112px; 
+        background: #fff;
+        border: 1px solid #C0C3C8;
+         border-radius: 4px;
+        span{
+          font-weight: 500;
+        }
+    }
+    .btn_left{display: flex;
+      gap: 16px;
+      button{
+        width: 135px;
+        &.update_btn{
+          border: 1px solid #2A5AD3;
+          span{
+            color: #2A5AD3;
+          }
+        }
+    }
+    }
+    
+  }
+}
