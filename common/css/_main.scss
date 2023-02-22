@@ -83,7 +83,7 @@
         }
       }
 
-      .email_box:not(:valid)~.reset_icon {
+      .id_box:not(:valid)~.reset_icon {
         display: none;
       }
 

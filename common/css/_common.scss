@@ -1,5 +1,6 @@
 .wrapper {
   width: 100%;
+  position: relative;
 }
 
 .container {
@@ -44,6 +45,12 @@ header {
                 border-radius: 999px;
                 font-weight: 600;
               }
+            }
+            &:hover a{
+              background: #fff;
+                color: #2A5AD3;
+                border-radius: 999px;
+                font-weight: 600;
             }
           }
         }
@@ -144,3 +151,39 @@ p{
   }
 
 }
+select {
+  padding: 0 16px;
+  max-width: 380px;
+  height: 36px;
+  font-weight: 400;
+  font-size: 1em;
+  color: #484B51;
+  width: 68%;
+  border: 1px solid #DBDBDB;
+  border-radius: 2px;
+
+}
+input{
+  padding: 0 16px;
+  height: 36px;
+  font-weight: 400;
+  font-size: 1em;
+  color: #484B51;
+  width: 68%;
+  border: 1px solid #DBDBDB;
+  border-radius: 2px;
+  &::placeholder{
+    color: #A1A7B4;
+  }
+}
+textarea{resize: none;
+padding:8px 16px;
+border: 1px solid #DBDBDB;
+  border-radius: 2px;
+  outline: 0;
+  overflow: auto;
+  font-size: 1em;
+  color: #37393F;
+  line-height: 150%;
+}
+b,span{line-height: 150%;}

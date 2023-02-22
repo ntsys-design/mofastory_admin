@@ -21,10 +21,10 @@
           </div>
           <nav>
             <ul>
-              <li><a href="#" class="on">SNS 현황</a></li>
-              <li><a href="#">공관소개</a></li>
+              <li><a href="./sns현황.html" class="on">SNS 현황</a></li>
+              <li><a href="./공관소개.html">공관소개</a></li>
               <li><a href="#">통계관리</a></li>
-              <li><a href="#">공관SNS 현황</a></li>
+              <li><a href="./공관sns현황.html">공관SNS 현황</a></li>
             </ul>
           </nav>
         </div>
@@ -45,7 +45,7 @@
       <div class="container">
         <h2>SNS현황</h2>
         <!-- 조회조건 -->
-        <div class="inquiry">
+        <div class="input_wrap">
           <ul>
             <li>
               <label for="continent_select" >대륙 선택 </label>
@@ -67,20 +67,20 @@
             </li>
             <li>
               <span>SNS 선택</span>
-              <ul>
-                <li><a href="#" class="active">전체</a></li>
-                <li><a href="#">페이스북</a></li>
-                <li><a href="#">트위터</a></li>
-                <li><a href="#">인스타그램</a></li>
-                <li><a href="#">유튜브</a></li>
+              <ul class="select_sns">
+                <li><button class="active"><b>전체</b></button></li>
+                <li><button><b>페이스북</b></button></li>
+                <li><button><b>트위터</b></button></li>
+                <li><button><b>인스타그램</b></button></li>
+                <li><button><b>유튜브</b></button></li>
               </ul>
             </li>
             <li>
               <span>콘텐츠 선택</span>
-              <ul>
-                <li><a href="#" class="active">전체</a></li>
-                <li><a href="#">인기콘텐츠</a></li>
-                <li><a href="#">우수사례</a></li>
+              <ul class="select_contents">
+                <li><button class="active"><b>전체</b></button></li>
+                <li><button><b>인기콘텐츠</b></button></li>
+                <li><button><b>우수사례</b></button></li>
               </ul>
             </li>
             <li>
@@ -154,17 +154,17 @@
                 <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
                 <td><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></td>
                 <td>10,310</td>
-                <td>2022. 10.23</td>
+                <td>2022.10.23</td>
               </tr>
-              <tr>
-                <td><label for="list_chk03" class="hide">리스트 체크</label>
-                  <input type="checkbox" id="list_chk03" name="list_chk03"></td>
+              <tr class="selected">
+                <td ><label for="list_chk03" class="hide">리스트 체크</label>
+                  <input type="checkbox" id="list_chk03" name="list_chk03" checked></td>
                 <td>11079</td>
                 <td onclick="location.href='sns현황_상세.html'">동남아시아/서남아시아태평양</td>
                 <td onclick="location.href='sns현황_상세.html'">주블라디보스톡 총영사관 유즈노사할린스크 출장소</td>
                 <td><img src="../common/images/youtube.png" alt="유튜브 아이콘"></td>
                 <td>325</td>
-                <td>2022. 10.23</td>
+                <td>2022.10.23</td>
               </tr>
               <tr>
                 <td><label for="list_chk04" class="hide">리스트 체크</label>
@@ -174,7 +174,7 @@
                 <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
                 <td><img src="../common/images/facebook.png" alt="페이스북 아이콘"></td>
                 <td>10,310</td>
-                <td>2022. 10.23</td>
+                <td>2022.10.23</td>
               </tr>
               <tr>
                 <td><label for="list_chk05" class="hide">리스트 체크</label>
@@ -184,7 +184,7 @@
                 <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
                 <td><img src="../common/images/twitter.png" alt="트위터 아이콘"></td>
                 <td>10,310</td>
-                <td>2022. 10.23</td>
+                <td>2022.10.23</td>
               </tr>
               <tr>
                 <td><label for="list_chk06" class="hide">리스트 체크</label>
@@ -194,7 +194,7 @@
                 <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
                 <td><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></td>
                 <td>10,310</td>
-                <td>2022. 10.23</td>
+                <td>2022.10.23</td>
               </tr>
               <tr>
                 <td><label for="list_chk07" class="hide">리스트 체크</label>
@@ -204,7 +204,7 @@
                 <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
                 <td><img src="../common/images/youtube.png" alt="유튜브 아이콘"></td>
                 <td>10,310</td>
-                <td>2022. 10.23</td>
+                <td>2022.10.23</td>
               </tr>
               <tr>
                 <td><label for="list_chk08" class="hide">리스트 체크</label>
@@ -214,7 +214,7 @@
                 <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
                 <td><img src="../common/images/facebook.png" alt="페이스북 아이콘"></td>
                 <td>10,310</td>
-                <td>2022. 10.23</td>
+                <td>2022.10.23</td>
               </tr>
               <tr>
                 <td><label for="list_chk09" class="hide">리스트 체크</label>
@@ -224,7 +224,7 @@
                 <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
                 <td><img src="../common/images/twitter.png" alt="트위터 아이콘"></td>
                 <td>10,310</td>
-                <td>2022. 10.23</td>
+                <td>2022.10.23</td>
               </tr>
               <tr>
                 <td><label for="list_chk10" class="hide">리스트 체크</label>
@@ -234,7 +234,7 @@
                 <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
                 <td><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></td>
                 <td>10,310</td>
-                <td>2022. 10.23</td>
+                <td>2022.10.23</td>
               </tr>
               <tr>
                 <td><label for="list_chk11" class="hide">리스트 체크</label>
@@ -244,7 +244,7 @@
                 <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
                 <td><img src="../common/images/youtube.png" alt="유튜브 아이콘"></td>
                 <td>10,310</td>
-                <td>2022. 10.23</td>
+                <td>2022.10.23</td>
               </tr>
             </tbody>
           </table>
@@ -289,6 +289,8 @@
     </footer>
   </div>
 
+  <script src="../common/js/jquery-3.6.2.min.js"></script>
+  <script src="../common/js/publish.js"></script>
 </body>
 
 </html>

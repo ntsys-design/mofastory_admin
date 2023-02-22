@@ -78,7 +78,11 @@
               <tr>
                 <th>이미지 / 동영상</th>
                 <td >
-                  <figure class="embassy_img"></figure>
+                  <figure>
+                    <button class="play_btn">
+                      <img src="../common/images/play_btn.png" alt="재생버튼">
+                    </button>
+                  </figure>
                 </td>
               </tr>
               <tr>
@@ -95,24 +99,16 @@
               </tr>
               <tr>
                 <th>우수사례 여부</th>
-                <td class="best_y">예</td>
-              </tr>
-              <tr>
-                <th>업데이트 요청시간</th>
-                <td>-</td>
-              </tr>
-              <tr>
-                <th>업데이트 완료시간</th>
-                <td>- </td>
+                <td>아니오</td>
               </tr>
               
             </tbody>
           </table>
           <div class="btn_wrap">
             <div class="btn_left">
-              <button class="remove_btn"><span>우수사례 해제</span></button>
-              <button class="update_btn"><span>업데이트 요청</span></button>
-            </div>
+                <button class="select_btn"><span>우수사례 선정</span></button> 
+                <button class="update_btn"><span>업데이트 요청</span></button>
+              </div>
             <button class="list_btn" onclick="location.href='sns현황.html'"><span>목록</span></button>
           </div>
           
@@ -135,23 +131,8 @@
   <p>Copyright 2023 MOFA Story. All Rights Reserved.</p>
 </div>
     </footer>
-    <!-- 이미지 팝업 모달 -->
-    <div class="img_modal">
-      <div class="modal_contents">
-        <button class="close"><img src="../common/images/close_btn.png" alt="모달팝업 닫기 버튼"></button>
-<figure>
-  <img src="../common/images/modal_img.png" alt="모달팝업 이미지">
-</figure>
-      </div>
-    </div>
-  <div class="dim"></div>
-
-
-
   </div>
 
-<script src="../common/js/jquery-3.6.2.min.js"></script>
-<script src="../common/js/publish.js"></script>
 </body>
 
 </html>

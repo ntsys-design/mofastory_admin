@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mofastory admin</title>
+  <link rel="stylesheet" href="../common/css/default.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="logo_nav_wrap">
+          <div class="hd_logo">
+            <h1>
+              <img src="../common/images/hd_logo.png" alt="헤더로고">
+            </h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="./sns현황.html">SNS 현황</a></li>
+              <li><a href="./공관소개.html"  >공관소개</a></li>
+              <li><a href="#">통계관리</a></li>
+              <li><a href="./공관sns현황.html" class="on">공관SNS 현황</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="util">
+          
+            <button class="login_info_btn"><span class="hide">로그인정보</span></button> 
+            <a href="#">정시월님</a>
+          
+            <button class="logout_btn">
+              <span>로그아웃</span>
+            </button>
+          
+
+        </div>
+      </div>
+    </header>
+    <div class="contents">
+      <div class="container">
+        <h2>공관SNS 현황</h2>
+
+        <h3>정보수정</h3>
+        <div class="input_wrap ebs_sns_regi">
+          <ul>
+            <li>
+              <label for="continent_select" >대륙명</label>
+                  <select name="continent_select" id="continent_select">
+                    <option value="" disabled >전체</option>
+                    <option value=""selected>동남아시아/서남아시아태평양    </option>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+            </li>
+            <li>
+              <label for="embassy_select" >공관명</label>
+                  <select name="embassy_select" id="embassy_select">
+                    <option value="" disabled >전체</option>
+                    <option value=""selected>주뉴질랜드 대사관
+                    </option>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+            </li>
+            <li>
+              <label for="sns_fb">페이스북</label>
+             <form class="input_box" >
+               <input type="text" name="sns_fb" id="sns_fb" required class="sns_input" placeholder="https://example.com" value="">
+               <button class="plus_btn" ></button>
+             </form>
+
+            </li>
+            <li>
+              <label for="sns_twt">트위터</label>
+             <form class="input_box">
+               <input type="text" name="sns_fb" required class="sns_input" id="sns_fb" placeholder="https://example.com" value="">
+               <button class="plus_btn"></button>
+             </form>
+            </li>
+            <li>
+              <label for="sns_insta">인스타그램</label>
+              <form class="input_box">
+                <input type="text" name="sns_insta" required class="sns_input" id="sns_insta" placeholder="https://example.com" value="">
+                <button class="plus_btn"></button>
+              </form>
+            </li>
+            <li>
+              <label for="sns_ytb">유튜브</label>
+              <form class="input_box">
+                <input type="text" name="sns_ytb" required class="sns_input" id="sns_ytb" placeholder="https://example.com" value="">
+                <button class="plus_btn"></button>
+              </form>
+            </li>
+          </ul>
+          <div class="btn_wrap">
+            <button class="register_btn"><span>확인</span></button>
+            <button class="cancel_btn" onclick="location.href='공관sns현황.html'"><span>취소</span></button>
+          </div>
+        </div>
+      
+    </div>
+    <footer>
+<div class="container">
+  <div class="ft_wrap">
+    <div class="ft_logo">
+      <img src="../common/images/footer_logo.png" alt="">
+      </div>
+      <ul>
+        <li>서울시 종로구 사직로 8길 60</li>
+        <li>Email. mofastory@mofa.go.kr</li>
+      </ul>
+  </div>
+  
+  <p>Copyright 2023 MOFA Story. All Rights Reserved.</p>
+</div>
+    </footer>
+  </div>
+
+</body>
+
+</html>

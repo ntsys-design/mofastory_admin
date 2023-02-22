@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mofastory admin</title>
+  <link rel="stylesheet" href="../common/css/default.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="logo_nav_wrap">
+          <div class="hd_logo">
+            <h1>
+              <img src="../common/images/hd_logo.png" alt="헤더로고">
+            </h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="./sns현황.html">SNS 현황</a></li>
+              <li><a href="./공관소개.html" class="on">공관소개</a></li>
+              <li><a href="#">통계관리</a></li>
+              <li><a href="./공관sns현황.html">공관SNS 현황</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="util">
+          
+            <button class="login_info_btn"><span class="hide">로그인정보</span></button> 
+            <a href="#">정시월님</a>
+          
+            <button class="logout_btn">
+              <span>로그아웃</span>
+            </button>
+          
+
+        </div>
+      </div>
+    </header>
+    <div class="contents">
+      <div class="container">
+        <h2>공관소개</h2>
+        <!-- 공관등록 -->
+        <div class="detail_info embassy_regi">
+          <h3>공관등록</h3>
+          <table>
+            <colgroup>
+            <col width="17.5%">
+            <col width="82.5%">
+          </colgroup>
+            <thead></thead>
+            <tbody>
+              <tr>
+                <th><label for="continent_select">대륙명</label></th>
+                <td><select name="continent_select" id="continent_select">
+                  <option value="" disabled selected>선택</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select></td>
+              </tr>
+              <tr>
+                <th><label for="embassy_name">공관명</label></th>
+                <td><select name="embassy_name" id="embassy_name">
+                  <option value="" disabled selected>선택</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select></td>
+              </tr>
+              <tr>
+                <th>공관 이미지</th>
+                <td><figure>
+                  <button class="plus_img"><img src="../common/images/plus_btn.png" alt=""></button>
+                </figure>
+              </td>
+              </tr>
+              <tr>
+                <th><label for="embassy_info">공관정보</label></th>
+                <td><textarea name="embassy_info" id="embassy_info" ></textarea></td>
+              </tr>
+              
+            </tbody>
+          </table>
+          <div class="btn_wrap">
+            
+              <button class="register_btn"><span>등록</span></button>
+              <button class="cancel_btn" onclick="location.href='공관소개.html'"><span>취소</span></button>
+           
+            
+          </div>
+          
+        </div>
+        <!-- //공관등록 -->
+           </div>
+    </div>
+    <footer>
+<div class="container">
+  <div class="ft_wrap">
+    <div class="ft_logo">
+      <img src="../common/images/footer_logo.png" alt="">
+      </div>
+      <ul>
+        <li>서울시 종로구 사직로 8길 60</li>
+        <li>Email. mofastory@mofa.go.kr</li>
+      </ul>
+  </div>
+  
+  <p>Copyright 2023 MOFA Story. All Rights Reserved.</p>
+</div>
+    </footer>
+  </div>
+
+</body>
+
+</html>

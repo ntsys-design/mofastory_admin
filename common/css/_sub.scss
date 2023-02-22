@@ -1,24 +1,34 @@
 // sns 현황
 .contents {
   .container {
+    margin-bottom: 80px;
     h2 {
       padding: 48px 0 24px;
       font-weight: 600;
       font-size: 1.75em;
+      color: #37393F;
+    }
+
+    h3{
+      padding: 24px 0 25px;
+      color: #37393F;
+      font-weight: 500;
+      font-size: 1.5em;
     }
 
     // 조회조건
-    .inquiry {
+    .input_wrap {
       background: #F9F9F9;
       border: 1px solid #DBDBDB;
       padding: 34px 48px 40px;
-      margin-bottom: 54px;
+      margin-bottom: 48px;
 
       >ul {
 
         >li {
           display: flex;
           align-items: center;
+
           padding-bottom: 24px;
 
           &:last-child {
@@ -32,7 +42,7 @@
             font-size: 1.125em;
             margin-right: 40px;
           }
-
+          
           select {
             padding: 0 16px;
             max-width: 380px;
@@ -40,7 +50,7 @@
             font-weight: 400;
             font-size: 1em;
             color: #484B51;
-
+            width: 68%;
             border: 1px solid #DBDBDB;
             border-radius: 2px;
 
@@ -63,7 +73,7 @@
                 margin: 0 8px;
               }
 
-              a {
+              button {
                 padding: 6px 16px;
                 color: #484B51;
                 border: 1px solid #DBDBDB;
@@ -71,6 +81,10 @@
                 background: #fff;
 
                 &.active {
+                  color: #2A5AD3;
+                  border: 1px solid #2A5AD3;
+                }
+                &:hover{
                   color: #2A5AD3;
                   border: 1px solid #2A5AD3;
                 }
@@ -157,11 +171,19 @@
             }
           }
 
-          &.inquiry_btn {
+          &.inquiry_btn, &.register_btn{
             background: #2A5AD3;
 
             span {
               color: #fff;
+            }
+          }
+          &.cancel_btn {
+            background: #fff;
+            border: 1px solid #C0C3C8;
+
+            span {
+              color: #484B51;
             }
           }
         }
@@ -170,7 +192,6 @@
 
     //리스트
     .list_wrap {
-      margin-bottom: 80px;
       position: relative;
       .list_top {
         display: flex;
@@ -205,9 +226,11 @@
           width: 24px;
           height: 24px;
           background: url(../images/list_chk_off.png);
+          background-size: 100%;
 
           &:checked {
             background: url(../images/list_chk_on.png);
+            background-size: 100%;
           }
         }
 
@@ -239,6 +262,10 @@
             height: 56px;
             border-bottom: 1px solid #EAEAEA;
 
+            &:hover{
+              background: #eaeaea30;
+            }
+
             td {
               vertical-align: middle;
               text-align: center;
@@ -248,8 +275,12 @@
                 text-align: left;
                 padding-left: 1%;
               }
+              
 
             }
+            &.selected{
+                background: #eaeaea30;
+              }
           }
         }
 
@@ -365,7 +396,32 @@
           font-weight: 500;
         }
       }
-
+      // 공관소개 리스트
+      &.ebs_intro_list,&.ebs_sns_list{
+        table{
+          tbody{
+            tr{
+              td{
+                padding-left: 0%;
+                text-align: center;
+                &:nth-child(3),
+              &:nth-child(2) {
+                text-align: left;
+                padding-left: 1%;
+              }
+              ul{
+                display: flex;
+                gap: 8px;
+                li{
+                  flex: 0 1 25%;
+                }
+                
+              }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -391,11 +447,25 @@
         padding: 16px 24px;
         font-weight: 500;
         font-size: 1.125em;
+        vertical-align: middle;
       }
       td{
         padding: 16px 24px;
+        vertical-align: middle;
         &.best_y{
           color: #2A5AD3;
+        }
+        figure{
+          width: 300px;
+          height: 200px;
+          background: #EAEAEA;
+          position: relative;
+          button.play_btn{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+          }
         }
       }
     }
@@ -415,6 +485,14 @@
         span{
           font-weight: 500;
         }
+        &.select_btn{
+          width: 151px;
+          background: #2A5AD3;
+          border: none;
+          span{
+            color: #fff;
+          }
+        }
     }
     .btn_left{display: flex;
       gap: 16px;
@@ -430,4 +508,158 @@
     }
     
   }
+  &.embassy_regi{
+    table{
+      tbody{
+        tr{
+          &:nth-child(1),&:nth-child(2){
+            td{
+              padding: 12px 24px;
+            }
+          }
+          td{
+            .figure_wrap{
+              display: flex;
+              gap: 28px;
+            }
+            figure{
+              width: 150px;
+              height: 150px;
+              overflow: hidden;
+              background: #fff;
+              border: 1px solid #DBDBDB;
+              border-radius: 2px;
+              position: relative;
+              img{
+                width: 100%;
+                height: 100%;
+              }
+              button.plus_img{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+              }
+              button.remove_btn{
+                position: absolute;
+                right: 4px;
+                top: 4px;
+              }
+            }
+
+            
+            input{
+              max-width: 380px;
+
+            }
+            textarea{
+              height: 232px;
+            }
+          }
+        }
+      }
+    }
+    .btn_wrap{
+      justify-content: center;
+      gap: 8px;
+      button{
+        border: 1px solid #C0C3C8;
+        &.register_btn{
+          background: #2A5AD3;
+          border: none;
+
+          span {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 공관SNS현황 공관SNS 등록
+.input_wrap{
+  ul{
+    li{
+      .input_box{
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: calc( 100% - 123px);
+        margin-left: auto;
+        margin-bottom: 8px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        input{
+          height: 36px;
+          font-weight: 400;
+          font-size: 1em;
+          color: #484B51;
+          width: calc(100% - 44px);
+          border: 1px solid #DBDBDB;
+          border-radius: 2px;
+          &:focus{
+            border: 1px solid #2A5AD3;
+          }
+        }
+        
+  
+     
+        button{
+          margin-left: 16px;
+          width: 28px;
+          height: 28px;
+          &.plus_btn{
+            background: url(../images/plus_btn.png) no-repeat ;
+          background-size: 100%;
+          }
+          &.minus_btn{
+            background: url(../images/minus_btn.png) no-repeat ;
+          background-size: 100%;
+          }
+
+        }
+       
+      }
+    }
+  }
+  
+}
+.contents .container .input_wrap.ebs_sns_regi >ul >li{
+  flex-wrap: wrap;
+}
+// modal
+.img_modal{
+  display: none;
+  z-index: 10;
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 1200px;
+  height: 834px;
+  background: #fff;
+  .close{
+    position: absolute;
+    right: 32px;
+    top: 32px;
+  }
+  figure{
+    width: 962px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+.dim{
+  display: none;
+  position: absolute;
+  width: 100%;height: 100%;
+  background: rgba(0 ,0, 0, 0.6);
+  top: 0;
+  left: 0;
 }
