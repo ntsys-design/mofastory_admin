@@ -584,7 +584,6 @@ b, span {
   margin-bottom: 16px;
 }
 .login .loginform_wrap form input {
-  margin: auto;
   width: 100%;
   padding: 16px 32px;
 }
@@ -668,7 +667,7 @@ b, span {
 }
 .login .loginform_wrap .login_btn span {
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .contents .container {
@@ -864,8 +863,8 @@ b, span {
 }
 .contents .container .list_wrap .list_top select {
   border-radius: 4px;
-  padding: 6px 44px 6px 16px;
   background-position: 96% 50%;
+  width: 90px;
   font-size: 1em;
 }
 .contents .container .list_wrap table {
@@ -918,6 +917,7 @@ b, span {
 .contents .container .list_wrap table tbody tr td:nth-child(3), .contents .container .list_wrap table tbody tr td:nth-child(4) {
   text-align: left;
   padding-left: 1%;
+  cursor: pointer;
 }
 .contents .container .list_wrap table tbody tr.selected {
   background: rgba(234, 234, 234, 0.1882352941);
@@ -1023,10 +1023,12 @@ b, span {
 .contents .container .list_wrap.ebs_intro_list table tbody tr td, .contents .container .list_wrap.ebs_sns_list table tbody tr td {
   padding-left: 0%;
   text-align: center;
+  cursor: default;
 }
 .contents .container .list_wrap.ebs_intro_list table tbody tr td:nth-child(3), .contents .container .list_wrap.ebs_intro_list table tbody tr td:nth-child(2), .contents .container .list_wrap.ebs_sns_list table tbody tr td:nth-child(3), .contents .container .list_wrap.ebs_sns_list table tbody tr td:nth-child(2) {
   text-align: left;
   padding-left: 1%;
+  cursor: pointer;
 }
 .contents .container .list_wrap.ebs_intro_list table tbody tr td ul, .contents .container .list_wrap.ebs_sns_list table tbody tr td ul {
   display: -webkit-box;
@@ -1237,27 +1239,39 @@ b, span {
   display: none;
   z-index: 10;
   position: absolute;
-  top: 4%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+}
+.img_modal .modal_contents {
+  position: absolute;
+  top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 1200px;
-  height: 834px;
+  height: 800px;
   background: #fff;
 }
-.img_modal .close {
+.img_modal .modal_contents .close {
   position: absolute;
   right: 32px;
   top: 32px;
 }
 .img_modal figure {
-  width: 962px;
-  height: 600px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .dim {

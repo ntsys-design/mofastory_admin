@@ -24,24 +24,22 @@ $(document).ready(function() {
     $(this).addClass('active')
   })
 
-  
+  // sns현황 상세페이지 이미지 모달 팝업
+  $(window).scroll(function () {
+    let scrTop = $(this).scrollTop()
     $('.embassy_img').on('click',function(){
-      $('.dim').css({'display' : 'block'})
     $('.img_modal').show()
     $('.img_modal').css({'top' : scrTop + 'px'})
-     $('body').css({'overflow' : 'hidden'})
-    })
+    $('body').css({'overflow' : 'hidden'})
+    }) 
   
-    
-  
-  // 상단 클로즈 버튼
+    // 클로즈 버튼
     $('.close').on('click',function(){
     $('.img_modal').hide()
-    $('.dim').css({'display' : 'none'})
     $('body').css({'overflow' : 'auto'})
   
     })
   
-   
+  })
   
 

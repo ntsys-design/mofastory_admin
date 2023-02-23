@@ -16,14 +16,14 @@
         <div class="logo_nav_wrap">
           <div class="hd_logo">
             <h1>
-              <img src="../common/images/hd_logo.png" alt="헤더로고">
+              <a href="#"><img src="../common/images/hd_logo.png" alt="헤더로고"></a>
             </h1>
           </div>
           <nav>
             <ul>
               <li><a href="./sns현황.html">SNS 현황</a></li>
               <li><a href="./공관소개.html" class="on">공관소개</a></li>
-              <li><a href="#">통계관리</a></li>
+              <li><a href="./통계관리.html">통계관리</a></li>
               <li><a href="./공관sns현황.html">공관SNS 현황</a></li>
             </ul>
           </nav>
@@ -84,7 +84,7 @@
                     <button class="remove_btn"><img src="../common/images/remove_btn.png" alt="삭제버튼"></button>
                   </figure>
                   <figure>
-                  <button class="plus_img"><img src="../common/images/plus_btn.png" alt=""></button>
+                  <button class="plus_img"><img src="../common/images/plus_btn.png" alt="사진추가 버튼"></button>
                 </figure>
                 </div>
               </td>
@@ -107,7 +107,7 @@ FAX: +64-4-472-3865</textarea></td>
           <div class="btn_wrap">
             
               <button class="register_btn"><span>확인</span></button>
-              <button class="cancel_btn"><span>취소</span></button>
+              <button class="cancel_btn" onclick="location.href='공관소개.html'"><span>취소</span></button>
            
             
           </div>
@@ -120,7 +120,7 @@ FAX: +64-4-472-3865</textarea></td>
 <div class="container">
   <div class="ft_wrap">
     <div class="ft_logo">
-      <img src="../common/images/footer_logo.png" alt="">
+      <a href="#"><img src="../common/images/footer_logo.png" alt="푸터로고"></a>
       </div>
       <ul>
         <li>서울시 종로구 사직로 8길 60</li>
@@ -132,7 +132,8 @@ FAX: +64-4-472-3865</textarea></td>
 </div>
     </footer>
   </div>
-
+  <script src="../common/js/jquery-3.6.2.min.js"></script>
+  <script src="../common/js/publish.js"></script>
 </body>
 
 </html>
