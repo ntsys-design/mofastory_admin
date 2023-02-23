@@ -585,6 +585,8 @@ b, span {
 }
 .login .loginform_wrap form input {
   margin: auto;
+  width: 100%;
+  padding: 16px 32px;
 }
 .login .loginform_wrap form input[type=text], .login .loginform_wrap form input[type=password] {
   height: 59px;
@@ -630,6 +632,7 @@ b, span {
   width: 20px;
   height: 20px;
   background-image: url("../images/chk_off.png");
+  background-size: 100%;
 }
 .login .loginform_wrap form.checkbox_form input:checked {
   background-image: url("../images/chk_on.png");

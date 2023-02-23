@@ -37,7 +37,8 @@
 
       input {
         margin: auto;
-
+        width: 100%;
+        padding: 16px 32px ;
         &[type="text"],
         &[type="password"] {
           height: 59px;
@@ -76,6 +77,7 @@
           height: 20px;
           
           background-image: url("../images/chk_off.png") ;
+          background-size: 100%;
 
           &:checked {
             background-image: url("../images/chk_on.png");
