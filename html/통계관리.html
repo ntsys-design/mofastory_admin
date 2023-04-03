@@ -21,7 +21,7 @@
           </div>
           <nav>
             <ul>
-              <li><a href="./sns현황.html" >SNS 현황</a></li>
+              <li><a href="./sns현황.html">SNS 현황</a></li>
               <li><a href="./공관소개.html">공관소개</a></li>
               <li><a href="./통계관리.html" class="on">통계관리</a></li>
               <li><a href="./공관sns현황.html">공관SNS 현황</a></li>
@@ -29,42 +29,36 @@
           </nav>
         </div>
         <div class="util">
-          
-            <button class="login_info_btn"><span class="hide">로그인정보</span></button> 
-            <a href="#">정시월님</a>
-          
-            <button class="logout_btn">
-              <span>로그아웃</span>
-            </button>
-          
+
+          <button class="login_info_btn"><span class="hide">로그인정보</span></button>
+          <a href="#">정시월님</a>
+
+          <button class="logout_btn">
+            <span>로그아웃</span>
+          </button>
+
 
         </div>
       </div>
     </header>
     <div class="contents">
       <div class="container">
-        <h2>통계</h2>
+        <div class="stat_tab">
+          <h2 class="on"><a href="./통계관리.html">등록 수 통계</a></h2>
+          <h2><a href="./통계관리_좋아요수통계.html">좋아요 수 통계</a></h2>
+        </div>
+
         <!-- 조회조건 -->
         <div class="input_wrap">
           <ul>
             <li>
-              <label for="continent_select" >대륙 선택 </label>
-                  <select name="continent_select" id="continent_select">
-                    <option value="" disabled selected>전체</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                  </select>
+              <span>조건 선택 </span>
+              <ul class="select_m">
+                <li><button class="active"><b>대륙별</b></button></li>
+                <li><button><b>공관별</b></button></li>
+              </ul>
             </li>
-            <li>
-              <label for="embassy_select" >공관 선택 </label>
-                  <select name="embassy_select" id="embassy_select">
-                    <option value="" disabled selected>전체</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                  </select>
-            </li>
+
             <li>
               <span>SNS 선택</span>
               <ul class="select_sns">
@@ -75,18 +69,11 @@
                 <li><button><b>유튜브</b></button></li>
               </ul>
             </li>
-            <li>
-              <span>콘텐츠 선택</span>
-              <ul class="select_contents">
-                <li><button class="active"><b>전체</b></button></li>
-                <li><button><b>인기콘텐츠</b></button></li>
-                <li><button><b>우수사례</b></button></li>
-              </ul>
-            </li>
+
             <li>
               <span>조회기간</span>
               <ul>
-                <li><input type="radio" name="period" id="period01" checked ><label for="period01" >오늘</label></li>
+                <li><input type="radio" name="period" id="period01" checked><label for="period01">오늘</label></li>
                 <li><input type="radio" name="period" id="period02"><label for="period02">7일</label></li>
                 <li><input type="radio" name="period" id="period03"><label for="period03">1개월</label></li>
                 <li><input type="radio" name="period" id="period04"><label for="period04">3개월</label></li>
@@ -94,9 +81,9 @@
                 <li><input type="radio" name="period" id="period06"><label for="period06">1년</label></li>
                 <li><input type="radio" name="period" id="period07"><label for="period07">기간선택</label>
                   <label for="date01" class="hide">날짜</label>
-                <input type="date" name="date01" id="date01" value="2020-11-08" > <span>~</span>
-                <label for="date02" class="hide">날짜</label>
-                <input type="date" name="date02" id="date02" value="2021-11-08" >
+                  <input type="date" name="date01" id="date01" value="2020-11-08"> <span>~</span>
+                  <label for="date02" class="hide">날짜</label>
+                  <input type="date" name="date02" id="date02" value="2021-11-08">
                 </li>
               </ul>
             </li>
@@ -107,185 +94,155 @@
           </div>
         </div>
         <!-- //조회조건 -->
-        <!-- 리스트 -->
-        <div class="list_wrap">
-          <div class="list_top">
-            <span>전체 <b>1,031건</b></span>
-            <div class="select_wrap">
-              <label for="count" class="hide">리스트 개수 </label>
-                    <select name="count" id="count">
-                      <option value="" disabled selected>10개</option>
-                      <option value="">30개</option>
-                      <option value="">50개</option>
-                      <option value="">100개</option>
-                    </select>
-            </div>
-          </div>
+
+        <!-- 대륙별 검색 페이지 -->
+        <div class="list_wrap stat_list">
           <table>
             <colgroup>
-              <col width="6%">
-              <col width="10%">
-              <col width="27%">
-              <col width="31%">
-              <col width="8%">
-              <col width="8%">
-              <col width="10%">
+              <col width="50%">
+              <col width="25%">
+              <col width="25%">
+
             </colgroup>
             <thead>
               <tr>
-                <th>
-                  <label for="list_chk01" class="hide">리스트 체크</label>
-                  <input type="checkbox" id="list_chk01" name="list_chk01">
-                </th>
-                <th>No</th>
-                <th>대륙명</th>
-                <th>공관명</th>
+                <th>대륙</th>
                 <th>SNS</th>
-                <th>좋아요 수</th>
-                <th>등록일</th>
+                <th>등록 수</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><label for="list_chk02" class="hide">리스트 체크</label>
-                  <input type="checkbox" id="list_chk02" name="list_chk02"></td>
-                <td>11080</td>
-                <td onclick="location.href='sns현황_상세.html'">동북아시아</td>
-                <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
-                <td><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></td>
-                <td>10,310</td>
-                <td>2022.10.23</td>
-              </tr>
-              <tr class="selected">
-                <td ><label for="list_chk03" class="hide">리스트 체크</label>
-                  <input type="checkbox" id="list_chk03" name="list_chk03" checked></td>
-                <td>11079</td>
-                <td onclick="location.href='sns현황_상세.html'">동남아시아/서남아시아태평양</td>
-                <td onclick="location.href='sns현황_상세.html'">주블라디보스톡 총영사관 유즈노사할린스크 출장소</td>
-                <td><img src="../common/images/youtube.png" alt="유튜브 아이콘"></td>
-                <td>325</td>
-                <td>2022.10.23</td>
+                <td>동북아시아</td>
+                <td>
+                  <ul>
+                    <li><img src="../common/images/facebook.png" alt="페이스북 아이콘"></li>
+                    <li><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></li>
+                    <li><img src="../common/images/twitter.png" alt="트위터 아이콘">
+                    </li>
+                    <li><img src="../common/images/youtube.png" alt="유튜브 아이콘"></li>
+                  </ul>
+                </td>
+                <td>75</td>
               </tr>
               <tr>
-                <td><label for="list_chk04" class="hide">리스트 체크</label>
-                  <input type="checkbox" id="list_chk04" name="list_chk04"></td>
-                <td>11080</td>
-                <td onclick="location.href='sns현황_상세.html'">동북아시아</td>
-                <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
-                <td><img src="../common/images/facebook.png" alt="페이스북 아이콘"></td>
-                <td>10,310</td>
-                <td>2022.10.23</td>
+                <td>동남아시아/서남아시아태평양</td>
+                <td>
+                  <ul>
+                    <li><img src="../common/images/facebook.png" alt="페이스북 아이콘"></li>
+                    <li><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></li>
+                    <li><img src="../common/images/twitter.png" alt="트위터 아이콘">
+                    </li>
+                    <li><img src="../common/images/youtube.png" alt="유튜브 아이콘"></li>
+                  </ul>
+                </td>
+                <td>123</td>
               </tr>
               <tr>
-                <td><label for="list_chk05" class="hide">리스트 체크</label>
-                  <input type="checkbox" id="list_chk05" name="list_chk05"></td>
-                <td>11080</td>
-                <td onclick="location.href='sns현황_상세.html'">동북아시아</td>
-                <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
-                <td><img src="../common/images/twitter.png" alt="트위터 아이콘"></td>
-                <td>10,310</td>
-                <td>2022.10.23</td>
+                <td>북미</td>
+                <td>
+                  <ul>
+                    <li><img src="../common/images/facebook.png" alt="페이스북 아이콘"></li>
+                    <li><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></li>
+                    <li><img src="../common/images/twitter.png" alt="트위터 아이콘">
+                    </li>
+                    <li><img src="../common/images/youtube.png" alt="유튜브 아이콘"></li>
+                  </ul>
+                </td>
+                <td>42</td>
               </tr>
               <tr>
-                <td><label for="list_chk06" class="hide">리스트 체크</label>
-                  <input type="checkbox" id="list_chk06" name="list_chk06"></td>
-                <td>11080</td>
-                <td onclick="location.href='sns현황_상세.html'">동북아시아</td>
-                <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
-                <td><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></td>
-                <td>10,310</td>
-                <td>2022.10.23</td>
+                <td>중남미</td>
+                <td>
+                  <ul>
+                    <li><img src="../common/images/facebook.png" alt="페이스북 아이콘"></li>
+                    <li><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></li>
+                    <li><img src="../common/images/twitter.png" alt="트위터 아이콘">
+                    </li>
+                    <li><img src="../common/images/youtube.png" alt="유튜브 아이콘"></li>
+                  </ul>
+                </td>
+                <td>69</td>
               </tr>
               <tr>
-                <td><label for="list_chk07" class="hide">리스트 체크</label>
-                  <input type="checkbox" id="list_chk07" name="list_chk07"></td>
-                <td>11080</td>
-                <td onclick="location.href='sns현황_상세.html'">동북아시아</td>
-                <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
-                <td><img src="../common/images/youtube.png" alt="유튜브 아이콘"></td>
-                <td>10,310</td>
-                <td>2022.10.23</td>
+                <td>유럽</td>
+                <td>
+                  <ul>
+                    <li><img src="../common/images/facebook.png" alt="페이스북 아이콘"></li>
+                    <li><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></li>
+                    <li><img src="../common/images/twitter.png" alt="트위터 아이콘">
+                    </li>
+                    <li><img src="../common/images/youtube.png" alt="유튜브 아이콘"></li>
+                  </ul>
+                </td>
+                <td>88</td>
               </tr>
               <tr>
-                <td><label for="list_chk08" class="hide">리스트 체크</label>
-                  <input type="checkbox" id="list_chk08" name="list_chk08"></td>
-                <td>11080</td>
-                <td onclick="location.href='sns현황_상세.html'">동북아시아</td>
-                <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
-                <td><img src="../common/images/facebook.png" alt="페이스북 아이콘"></td>
-                <td>10,310</td>
-                <td>2022.10.23</td>
+                <td>사하라 이남 아프리카</td>
+                <td>
+                  <ul>
+                    <li><img src="../common/images/facebook.png" alt="페이스북 아이콘"></li>
+                    <li><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></li>
+                    <li><img src="../common/images/twitter.png" alt="트위터 아이콘">
+                    </li>
+                    <li><img src="../common/images/youtube.png" alt="유튜브 아이콘"></li>
+                  </ul>
+                </td>
+                <td>57</td>
               </tr>
               <tr>
-                <td><label for="list_chk09" class="hide">리스트 체크</label>
-                  <input type="checkbox" id="list_chk09" name="list_chk09"></td>
-                <td>11080</td>
-                <td onclick="location.href='sns현황_상세.html'">동북아시아</td>
-                <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
-                <td><img src="../common/images/twitter.png" alt="트위터 아이콘"></td>
-                <td>10,310</td>
-                <td>2022.10.23</td>
+                <td>중동 북아프리카</td>
+                <td>
+                  <ul>
+                    <li><img src="../common/images/facebook.png" alt="페이스북 아이콘"></li>
+                    <li><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></li>
+                    <li><img src="../common/images/twitter.png" alt="트위터 아이콘">
+                    </li>
+                    <li><img src="../common/images/youtube.png" alt="유튜브 아이콘"></li>
+                  </ul>
+                <td>26</td>
               </tr>
               <tr>
-                <td><label for="list_chk10" class="hide">리스트 체크</label>
-                  <input type="checkbox" id="list_chk10" name="list_chk10"></td>
-                <td>11080</td>
-                <td onclick="location.href='sns현황_상세.html'">동북아시아</td>
-                <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
-                <td><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></td>
-                <td>10,310</td>
-                <td>2022.10.23</td>
+                <td>러시아 중앙아시아</td>
+                <td>
+                  <ul>
+                    <li><img src="../common/images/facebook.png" alt="페이스북 아이콘"></li>
+                    <li><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></li>
+                    <li><img src="../common/images/twitter.png" alt="트위터 아이콘">
+                    </li>
+                    <li><img src="../common/images/youtube.png" alt="유튜브 아이콘"></li>
+                  </ul>
+                </td>
+                <td>17</td>
               </tr>
               <tr>
-                <td><label for="list_chk11" class="hide">리스트 체크</label>
-                  <input type="checkbox" id="list_chk11" name="list_chk11"></td>
-                <td>11080</td>
-                <td onclick="location.href='sns현황_상세.html'">동북아시아</td>
-                <td onclick="location.href='sns현황_상세.html'">주몽골 대사관</td>
-                <td><img src="../common/images/youtube.png" alt="유튜브 아이콘"></td>
-                <td>10,310</td>
-                <td>2022.10.23</td>
+                <td colspan="2"></td>
+                <td class="total">497</td>
               </tr>
             </tbody>
           </table>
-          <div class="pagination_wrap">
-            <div></div>
-            <div class="pagination">
-              <a href="#" class="first_page"><span class="hide">처음 페이지로 이동</span></a>
-              <a href="#" class="prev_page"><span class="hide">이전 페이지로 이동</span></a>
-              <ul>
-                <li><a href="#" class="active">1<span class="hide">현재 페이지</span></a></li>
-                <li><a href="#">2<span class="hide">페이지 이동</span></a></li>
-                <li><a href="#">3<span class="hide">페이지 이동</span></a></li>
-                <li><a href="#">4<span class="hide">페이지 이동</span></a></li>
-                <li><a href="#">5<span class="hide">페이지 이동</span></a></li>
-              </ul>
-              <a href="#" class="next_page"><span class="hide">다음 페이지로 이동</span></a>
-              <a href="#" class="last_page"><span class="hide">마지막 페이지로 이동</span></a>
-  
-            </div>
-             
+          <div class="btn_wrap">
+            <button class="excel_btn"><span>엑셀 다운로드</span></button>
           </div>
-          <button class="best_btn"><span>우수사례 선정</span></button>
         </div>
-        <!-- //리스트 -->
+        <!--// 대륙별 검색 페이지 -->
 
       </div>
     </div>
     <footer>
-<div class="container">
-  <div class="ft_wrap">
-    <div class="ft_logo">
-      <a href="#"><img src="../common/images/footer_logo.png" alt="푸터로고"></a>
+      <div class="container">
+        <div class="ft_wrap">
+          <div class="ft_logo">
+            <a href="#"><img src="../common/images/footer_logo.png" alt="푸터로고"></a>
+          </div>
+          <ul>
+            <li>서울시 종로구 사직로 8길 60</li>
+            <li>Email. mofastory@mofa.go.kr</li>
+          </ul>
+        </div>
+
+        <p>Copyright 2023 MOFA Story. All Rights Reserved.</p>
       </div>
-      <ul>
-        <li>서울시 종로구 사직로 8길 60</li>
-        <li>Email. mofastory@mofa.go.kr</li>
-      </ul>
-  </div>
-  
-  <p>Copyright 2023 MOFA Story. All Rights Reserved.</p>
-</div>
     </footer>
   </div>
 

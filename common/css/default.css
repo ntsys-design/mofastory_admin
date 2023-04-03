@@ -1283,3 +1283,73 @@ b, span {
   top: 0;
   left: 0;
 }
+/* 0403 수정 */
+.contents .container .list_wrap.ebs_sns_list table tbody tr td ul li {
+  -webkit-box-flex: 0;
+  -ms-flex:unset;
+  flex: unset;
+}
+/* 0403 통계관리 페이지 */
+
+.contents .container .stat_tab{
+  display: flex;
+  gap: 50px;
+}
+.contents .container .stat_tab h2{
+  font-weight: 400;
+  position: relative;
+}
+.contents .container .stat_tab h2.on{
+ font-weight: 600;
+}
+.contents .container .stat_tab h2:first-child:after{
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 34px;
+  background: #484B51;
+  right: -25px;
+  top: 45px;
+}
+.contents .container .list_wrap .btn_wrap{
+  display: flex;
+  justify-content: flex-end;
+}
+.contents .container .list_wrap .excel_btn {
+
+  width: 151px;
+  height: 44px;
+  background: #2A5AD3;
+  border-radius: 4px;
+}
+.contents .container .list_wrap .excel_btn span {
+  color: #fff;
+  font-weight: 500;
+}
+
+.contents .container .list_wrap.stat_list table tbody tr td ul{
+display: flex;
+gap: 8px;
+justify-content: center;
+}
+
+.contents .container .list_wrap.stat_list table tbody tr td.total{
+  font-weight: 500;
+}
+.contents .container .list_wrap.stat_list table tbody tr td{
+  text-align: center;
+  padding: 0;
+  cursor: default;
+  padding:0 10px;
+}
+.contents .container .list_wrap.like_list table tbody tr td{
+  text-align: center;
+  padding: 0 10px;
+  cursor: default;
+}
+.contents .container .list_wrap.like_list table tbody tr td:nth-child(2) a{
+  max-width: 100%;
+  text-overflow: ellipsis; 
+  overflow: hidden; 
+  white-space: nowrap;
+}

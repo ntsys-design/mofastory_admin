@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mofastory admin</title>
+  <link rel="stylesheet" href="../common/css/default.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="logo_nav_wrap">
+          <div class="hd_logo">
+            <h1>
+              <a href="#"><a href="#"><img src="../common/images/hd_logo.png" alt="헤더로고"></a></a>
+            </h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="./sns현황.html">SNS 현황</a></li>
+              <li><a href="./공관소개.html">공관소개</a></li>
+              <li><a href="./통계관리.html" class="on">통계관리</a></li>
+              <li><a href="./공관sns현황.html">공관SNS 현황</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="util">
+
+          <button class="login_info_btn"><span class="hide">로그인정보</span></button>
+          <a href="#">정시월님</a>
+
+          <button class="logout_btn">
+            <span>로그아웃</span>
+          </button>
+
+
+        </div>
+      </div>
+    </header>
+    <div class="contents">
+      <div class="container">
+        <div class="stat_tab">
+          <h2><a href="./통계관리.html">등록 수 통계</a></h2>
+          <h2 class="on"><a href="./통계관리_좋아요수통계.html">좋아요 수 통계</a></h2>
+        </div>
+
+        <!-- 조회조건 -->
+        <div class="input_wrap">
+          <ul>
+            <li>
+              <label for="continent_select" >대륙 선택 </label>
+                  <select name="continent_select" id="continent_select">
+                    <option value="" disabled selected>전체</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+            </li>
+            <li>
+              <label for="embassy_select" >공관 선택 </label>
+                  <select name="embassy_select" id="embassy_select">
+                    <option value="" disabled selected>전체</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+            </li>
+            <li>
+              <span>SNS 선택</span>
+              <ul class="select_sns">
+                <li><button class="active"><b>전체</b></button></li>
+                <li><button><b>페이스북</b></button></li>
+                <li><button><b>트위터</b></button></li>
+                <li><button><b>인스타그램</b></button></li>
+                <li><button><b>유튜브</b></button></li>
+              </ul>
+            </li>
+            <li>
+              <span>조회기간</span>
+              <ul>
+                <li><input type="radio" name="period" id="period01" checked ><label for="period01" >오늘</label></li>
+                <li><input type="radio" name="period" id="period02"><label for="period02">7일</label></li>
+                <li><input type="radio" name="period" id="period03"><label for="period03">1개월</label></li>
+                <li><input type="radio" name="period" id="period04"><label for="period04">3개월</label></li>
+                <li><input type="radio" name="period" id="period05"><label for="period05">6개월</label></li>
+                <li><input type="radio" name="period" id="period06"><label for="period06">1년</label></li>
+                <li><input type="radio" name="period" id="period07"><label for="period07">기간선택</label>
+                  <label for="date01" class="hide">날짜</label>
+                <input type="date" name="date01" id="date01" value="2020-11-08" > <span>~</span>
+                <label for="date02" class="hide">날짜</label>
+                <input type="date" name="date02" id="date02" value="2021-11-08" >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="btn_wrap">
+            <button class="reset_btn"><span>초기화</span></button>
+            <button class="inquiry_btn"><span>조회</span></button>
+          </div>
+        </div>
+        <!-- //조회조건 -->
+
+        <!-- 리스트 -->
+        <div class="list_wrap like_list">
+          <div class="list_top">
+            <span>전체 <b>1,031건</b></span>
+            <div class="select_wrap">
+              <label for="count" class="hide">리스트 개수 </label>
+                    <select name="count" id="count">
+                      <option value="" disabled selected>10개</option>
+                      <option value="">30개</option>
+                      <option value="">50개</option>
+                      <option value="">100개</option>
+                    </select>
+            </div>
+          </div>
+          <table>
+            <colgroup>
+              <col width="9%">
+              <col width="30%">
+              <col width="25%">
+              <col width="16%">
+              <col width="9%">
+              <col width="11%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>제목</th>
+                <th>대륙명</th>
+                <th>공관명</th>
+                <th>SNS</th>
+                <th>좋아요 수</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><a href="#" target="_blank">sns 제목이 노출됩니다. sns 제목이 노출됩니다. sns 제목이 노출됩니다.</a> </td>
+                <td>동북아시아</td>
+                <td>주나고야 총영사관</td>
+                <td><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></td>
+                <td>222</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><a href="#" target="_blank">sns 제목이 노출됩니다. sns 제목이 노출됩니다. sns 제목이 노출됩니다.</a> </td>
+                <td>동남아시아/서남아시아태평양</td>
+                <td>주뉴질랜드 대사관</td>
+                <td><img src="../common/images/facebook.png" alt="페이스북 아이콘"></td>
+                <td>174</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><a href="#" target="_blank">sns 제목이 노출됩니다. sns 제목이 노출됩니다. sns 제목이 노출됩니다.</a> </td>
+                <td>북미</td>
+                <td>주로스앤젤레스 총영사관</td>
+                <td><img src="../common/images/youtube.png" alt="유튜브 아이콘"></td>
+                <td>123</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><a href="#" target="_blank">sns 제목이 노출됩니다. sns 제목이 노출됩니다. sns 제목이 노출됩니다.</a> </td>
+                <td>중남미</td>
+                <td>주상파울로 총영사관</td>
+                <td><img src="../common/images/twitter.png" alt="트위터 아이콘"></td>
+                <td>98</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td><a href="#" target="_blank">sns 제목이 노출됩니다. sns 제목이 노출됩니다. sns 제목이 노출됩니다.</a> </td>
+                <td>유럽</td>
+                <td>주덴마크 대사관</td>
+                <td><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></td>
+                <td>76</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td><a href="#" target="_blank">sns 제목이 노출됩니다. sns 제목이 노출됩니다. sns 제목이 노출됩니다.</a> </td>
+                <td>사하라 이남 아프리카</td>
+                <td>주카메룬 대사관</td>
+                <td><img src="../common/images/facebook.png" alt="페이스북 아이콘"></td>
+                <td>55</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td><a href="#" target="_blank">sns 제목이 노출됩니다. sns 제목이 노출됩니다. sns 제목이 노출됩니다.</a> </td>
+                <td>중동 북아프리카</td>
+                <td>주두바이 총영사관</td>
+                <td><img src="../common/images/youtube.png" alt="유튜브 아이콘"></td>
+                <td>33</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td><a href="#" target="_blank">sns 제목이 노출됩니다. sns 제목이 노출됩니다. sns 제목이 노출됩니다.</a> </td>
+                <td>러시아 중앙아시아</td>
+                <td>주러시아 대사관</td>
+                <td><img src="../common/images/twitter.png" alt="트위터 아이콘"></td>
+                <td>21</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td><a href="#" target="_blank">sns 제목이 노출됩니다. sns 제목이 노출됩니다. sns 제목이 노출됩니다.</a> </td>
+                <td>북미</td>
+                <td>주벤쿠버 총영사관</td>
+                <td><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td><a href="#" target="_blank">sns 제목이 노출됩니다. sns 제목이 노출됩니다. sns 제목이 노출됩니다.</a> </td>
+                <td>중남미</td>
+                <td>주브라질 대사관</td>
+                <td><img src="../common/images/instagram.png" alt="인스타그램 아이콘"></td>
+                <td>3</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pagination_wrap">
+            <div></div>
+            <div class="pagination">
+              <a href="#" class="first_page"><span class="hide">처음 페이지로 이동</span></a>
+              <a href="#" class="prev_page"><span class="hide">이전 페이지로 이동</span></a>
+              <ul>
+                <li><a href="#" class="active">1<span class="hide">현재 페이지</span></a></li>
+                <li><a href="#">2<span class="hide">페이지 이동</span></a></li>
+                <li><a href="#">3<span class="hide">페이지 이동</span></a></li>
+                <li><a href="#">4<span class="hide">페이지 이동</span></a></li>
+                <li><a href="#">5<span class="hide">페이지 이동</span></a></li>
+              </ul>
+              <a href="#" class="next_page"><span class="hide">다음 페이지로 이동</span></a>
+              <a href="#" class="last_page"><span class="hide">마지막 페이지로 이동</span></a>
+  
+            </div>
+             
+          </div>
+          <button class="best_btn excel_btn"><span>엑셀 다운로드</span></button>
+        </div>
+        <!-- //리스트 -->
+
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="ft_wrap">
+          <div class="ft_logo">
+            <a href="#"><img src="../common/images/footer_logo.png" alt="푸터로고"></a>
+          </div>
+          <ul>
+            <li>서울시 종로구 사직로 8길 60</li>
+            <li>Email. mofastory@mofa.go.kr</li>
+          </ul>
+        </div>
+
+        <p>Copyright 2023 MOFA Story. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../common/js/jquery-3.6.2.min.js"></script>
+  <script src="../common/js/publish.js"></script>
+</body>
+
+</html>
