@@ -1296,20 +1296,21 @@ b, span {
   gap: 50px;
 }
 .contents .container .stat_tab h2{
-  font-weight: 400;
+  color: #AAB0B8;
+  font-weight: 600;
   position: relative;
 }
 .contents .container .stat_tab h2.on{
- font-weight: 600;
+ color: #000;
 }
 .contents .container .stat_tab h2:first-child:after{
   content: '';
   position: absolute;
   width: 2px;
-  height: 34px;
-  background: #484B51;
+  height: 20px;
+  background: #CCCCCC;
   right: -25px;
-  top: 45px;
+  top: 50px;
 }
 .contents .container .list_wrap .btn_wrap{
   display: flex;
@@ -1352,4 +1353,13 @@ justify-content: center;
   text-overflow: ellipsis; 
   overflow: hidden; 
   white-space: nowrap;
+}
+
+/* 0404 수정 */
+.contents .container .list_wrap table thead tr th{
+  color: #000000;
+}
+
+.contents .container .list_wrap.stat_list table tbody tr td:nth-child(1){
+  text-align: left;
 }

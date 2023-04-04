@@ -54,16 +54,21 @@
             <li>
               <label for="continent_select" >대륙 선택 </label>
                   <select name="continent_select" id="continent_select">
-                    <option value="" disabled selected>전체</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
+                    <option value="" selected>전체</option>
+                    <option value="">동북아시아</option>
+                    <option value="">동남아시아/서남아시아태평양</option>
+                    <option value="">북미</option>
+                    <option value="">중남미</option>
+                    <option value="">유럽</option>
+                    <option value="">사하라 이남 아프리카</option>
+                    <option value="">중동 북아프리카</option>
+                    <option value="">러시아 중앙아시아</option>
                   </select>
             </li>
             <li>
               <label for="embassy_select" >공관 선택 </label>
                   <select name="embassy_select" id="embassy_select">
-                    <option value="" disabled selected>전체</option>
+                    <option value="" selected>전체</option>
                     <option value=""></option>
                     <option value=""></option>
                     <option value=""></option>
@@ -82,13 +87,8 @@
             <li>
               <span>조회기간</span>
               <ul>
-                <li><input type="radio" name="period" id="period01" checked ><label for="period01" >오늘</label></li>
-                <li><input type="radio" name="period" id="period02"><label for="period02">7일</label></li>
-                <li><input type="radio" name="period" id="period03"><label for="period03">1개월</label></li>
-                <li><input type="radio" name="period" id="period04"><label for="period04">3개월</label></li>
-                <li><input type="radio" name="period" id="period05"><label for="period05">6개월</label></li>
-                <li><input type="radio" name="period" id="period06"><label for="period06">1년</label></li>
-                <li><input type="radio" name="period" id="period07"><label for="period07">기간선택</label>
+
+                <li>
                   <label for="date01" class="hide">날짜</label>
                 <input type="date" name="date01" id="date01" value="2020-11-08" > <span>~</span>
                 <label for="date02" class="hide">날짜</label>
