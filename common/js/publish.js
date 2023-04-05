@@ -48,3 +48,8 @@ $('.select_m li button').on('click',function(){
   $('.select_m li button').removeClass('active')
   $(this).addClass('active')
 })
+
+$('.stat_tab h2').on('click',function(){
+  $('.stat_tab h2').removeClass('on')
+  $(this).addClass('on')
+})

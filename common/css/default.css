@@ -1363,3 +1363,10 @@ justify-content: center;
 .contents .container .list_wrap.stat_list table tbody tr td:nth-child(1){
   text-align: left;
 }
+.contents .container .list_wrap.stat_list.stat_office table tbody tr td:nth-child(2){
+  text-align: left;
+}
+
+.contents .container .list_wrap.like_list table tbody tr td:nth-child(2), .contents .container .list_wrap.like_list table tbody tr td:nth-child(3),.contents .container .list_wrap.like_list table tbody tr td:nth-child(4){
+  text-align: left;
+}
