@@ -43,7 +43,6 @@ $(document).ready(function() {
   })
   
 // 0403  통계관리 페이지 
-// 조건 선택
 $('.select_m li button').on('click',function(){
   $('.select_m li button').removeClass('active')
   $(this).addClass('active')
