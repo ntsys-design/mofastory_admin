@@ -1425,6 +1425,16 @@ justify-content: center;
 .conrainer{
   width: 100%;
 }
+.contents .container .input_wrap > ul > li ul{
+  flex-wrap: wrap;
+  gap: 10px 0;
+}
+.contents .container .input_wrap > ul > li{
+  flex-shrink: 0;
+}
+header .container .logo_nav_wrap{
+  gap: 20px;
+}
 @media screen and (max-width: 1200px){
   .container{
     padding:0 20px;
@@ -1433,5 +1443,12 @@ justify-content: center;
 @media screen and (max-width: 1080px){
   header .container .logo_nav_wrap .hd_logo{
   margin-right: 10px;
+}
+header .container .logo_nav_wrap nav ul{
+  height: 100%;
+  align-items: center;
+}
+header .container .logo_nav_wrap nav ul li a{
+  padding: 10px;
 }
 }
