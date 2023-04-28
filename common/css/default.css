@@ -1370,3 +1370,68 @@ justify-content: center;
 .contents .container .list_wrap.like_list table tbody tr td:nth-child(2), .contents .container .list_wrap.like_list table tbody tr td:nth-child(3),.contents .container .list_wrap.like_list table tbody tr td:nth-child(4){
   text-align: left;
 }
+
+/* 0427 관리자 관리 페이지 */
+.contents .container .input_wrap.administrator{
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.contents .container .input_wrap.administrator ul{
+  border: 2px solid #dbdbdb;
+  border-right: none;
+  border-left: none;
+}
+.contents .container .input_wrap.administrator ul li{
+  padding-bottom: 0;
+  border-bottom: 1px solid #EBEEF0;
+}
+.contents .container .input_wrap.administrator ul li label{
+  width: 210px;
+  padding: 16px 24px;
+  background: #F7F7F8;
+  margin-right: 0;
+  
+}
+.contents .container .input_wrap.administrator ul li form{
+  padding:0 24px;
+  width: 100%;
+}
+.contents .container .input_wrap.administrator ul li form input{
+  width: 380px;
+  margin-right: 16px;
+}
+.contents .container .input_wrap.administrator ul li form input:disabled{
+  background: #EBEEF0;
+}
+.contents .container .input_wrap.administrator ul li form p{
+  color: #484B51;
+}
+.contents .container .input_wrap.administrator .btn_wrap{
+  margin-top: 24px;
+}
+.contents .container .input_wrap.administrator .btn_wrap button{
+  background:#004FC7;
+}
+.contents .container .input_wrap.administrator .btn_wrap button span{
+  color: #ffffff;
+}
+
+.contents{
+  min-height: calc(100vh - 203px);
+  width: 100%;
+}
+.conrainer{
+  width: 100%;
+}
+@media screen and (max-width: 1200px){
+  .container{
+    padding:0 20px;
+  }
+}
+@media screen and (max-width: 1080px){
+  header .container .logo_nav_wrap .hd_logo{
+  margin-right: 10px;
+}
+}
